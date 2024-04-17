@@ -10,7 +10,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class GameBoard extends StatefulWidget {
-  const GameBoard({super.key});
+  final int timeSelected;
+  const GameBoard({Key? key, required this.timeSelected}) : super(key: key);
 
   @override
   State<GameBoard> createState() => _GameBoardState();
@@ -23,8 +24,8 @@ class _GameBoardState extends State<GameBoard> {
 
   int selectedRow = -1;
   int selectedCol = -1;
-  int whiteTimeRemaining = 600; // 10 minutos en segundos
-  int blackTimeRemaining = 600;
+  int whiteTimeRemaining = 0; // 10 minutos en segundos
+  int blackTimeRemaining = 0;
   late Timer timer; // 10 minutos en segundos
 
   List<List<int>> validMoves = [];
@@ -44,6 +45,8 @@ class _GameBoardState extends State<GameBoard> {
   void initState() {
     super.initState();
     _initializeBoard();
+    whiteTimeRemaining = widget.timeSelected;
+    blackTimeRemaining = widget.timeSelected;
     startTimer();
   }
 

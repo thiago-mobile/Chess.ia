@@ -1,3 +1,4 @@
+import 'package:chess_app/game_board.dart';
 import 'package:chess_app/menu.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class _TimePlayState extends State<TimePlay> {
     return Scaffold(
       backgroundColor: const Color(0xFF363636),
       appBar: AppBar(
-        backgroundColor: Color(0xff1B1B1B),
+        backgroundColor: const Color(0xff1B1B1B),
         leading: IconButton(
           onPressed: () {
             Navigator.push(
@@ -22,12 +23,12 @@ class _TimePlayState extends State<TimePlay> {
               MaterialPageRoute(builder: (context) => MenuPlay()),
             );
           },
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
             color: Colors.white,
           ),
         ),
-        title: Text(
+        title: const Text(
           'Tiempo De Juego',
           style: TextStyle(
             fontFamily: 'MontSerrat-SemiBold',
@@ -43,7 +44,7 @@ class _TimePlayState extends State<TimePlay> {
             clipper: WaveClipper(),
             child: Container(
               height: 70.0,
-              color: Color(0xff1B1B1B),
+              color: const Color(0xff1B1B1B),
             ),
           ),
           Padding(
@@ -61,9 +62,9 @@ class _TimePlayState extends State<TimePlay> {
                     height: 25,
                   ),
                 ),
-                SizedBox(width: 10), // Espacio entre la imagen y el texto
-                Padding(
-                  padding: const EdgeInsets.only(top: 10),
+                const SizedBox(width: 10), // Espacio entre la imagen y el texto
+                const Padding(
+                  padding: EdgeInsets.only(top: 10),
                   child: Text(
                     'Bala',
                     style: TextStyle(
@@ -80,15 +81,23 @@ class _TimePlayState extends State<TimePlay> {
               children: [
 //SECCION BALA
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => GameBoard(
+                            timeSelected: 60), // Ejemplo de 60 segundos
+                      ),
+                    );
+                  },
                   child: Container(
                     width: 100,
                     height: 45,
                     decoration: BoxDecoration(
-                      color: Color(0xFF6B6B6B),
+                      color: const Color(0xFF6B6B6B),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         '1 min',
                         style: TextStyle(
@@ -99,15 +108,23 @@ class _TimePlayState extends State<TimePlay> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => GameBoard(
+                            timeSelected: 60 + 1), // Ejemplo de 60 segundos
+                      ),
+                    );
+                  },
                   child: Container(
                     width: 100,
                     height: 45,
                     decoration: BoxDecoration(
-                      color: Color(0xFF6B6B6B),
+                      color: const Color(0xFF6B6B6B),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         '1|1',
                         style: TextStyle(
@@ -118,15 +135,23 @@ class _TimePlayState extends State<TimePlay> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => GameBoard(
+                            timeSelected: 60 + 4), // Ejemplo de 60 segundos
+                      ),
+                    );
+                  },
                   child: Container(
                     width: 100,
                     height: 45,
                     decoration: BoxDecoration(
-                      color: Color(0xFF6B6B6B),
+                      color: const Color(0xFF6B6B6B),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         '1|4',
                         style: TextStyle(
@@ -155,9 +180,9 @@ class _TimePlayState extends State<TimePlay> {
                     height: 25,
                   ),
                 ),
-                SizedBox(width: 10), // Espacio entre la imagen y el texto
-                Padding(
-                  padding: const EdgeInsets.only(top: 10),
+                const SizedBox(width: 10), // Espacio entre la imagen y el texto
+                const Padding(
+                  padding: EdgeInsets.only(top: 10),
                   child: Text(
                     'Blitz',
                     style: TextStyle(
@@ -173,15 +198,23 @@ class _TimePlayState extends State<TimePlay> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => GameBoard(
+                            timeSelected: 180), // Ejemplo de 60 segundos
+                      ),
+                    );
+                  },
                   child: Container(
                     width: 100,
                     height: 45,
                     decoration: BoxDecoration(
-                      color: Color(0xFF6B6B6B),
+                      color: const Color(0xFF6B6B6B),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         '3 min',
                         style: TextStyle(
@@ -192,15 +225,23 @@ class _TimePlayState extends State<TimePlay> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => GameBoard(
+                            timeSelected: 180 + 4), // Ejemplo de 60 segundos
+                      ),
+                    );
+                  },
                   child: Container(
                     width: 100,
                     height: 45,
                     decoration: BoxDecoration(
-                      color: Color(0xFF6B6B6B),
+                      color: const Color(0xFF6B6B6B),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         '3|4',
                         style: TextStyle(
@@ -211,15 +252,23 @@ class _TimePlayState extends State<TimePlay> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => GameBoard(
+                            timeSelected: 180 + 10), // Ejemplo de 60 segundos
+                      ),
+                    );
+                  },
                   child: Container(
                     width: 100,
                     height: 45,
                     decoration: BoxDecoration(
-                      color: Color(0xFF6B6B6B),
+                      color: const Color(0xFF6B6B6B),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         '3|10',
                         style: TextStyle(
@@ -248,9 +297,9 @@ class _TimePlayState extends State<TimePlay> {
                     height: 25,
                   ),
                 ),
-                SizedBox(width: 10), // Espacio entre la imagen y el texto
-                Padding(
-                  padding: const EdgeInsets.only(top: 10),
+                const SizedBox(width: 10), // Espacio entre la imagen y el texto
+                const Padding(
+                  padding: EdgeInsets.only(top: 10),
                   child: Text(
                     'Rapida',
                     style: TextStyle(
@@ -266,15 +315,23 @@ class _TimePlayState extends State<TimePlay> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => GameBoard(
+                            timeSelected: 300), // Ejemplo de 60 segundos
+                      ),
+                    );
+                  },
                   child: Container(
                     width: 100,
                     height: 45,
                     decoration: BoxDecoration(
-                      color: Color(0xFF6B6B6B),
+                      color: const Color(0xFF6B6B6B),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         '10 min',
                         style: TextStyle(
@@ -285,15 +342,23 @@ class _TimePlayState extends State<TimePlay> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => GameBoard(
+                            timeSelected: 300 + 5), // Ejemplo de 60 segundos
+                      ),
+                    );
+                  },
                   child: Container(
                     width: 100,
                     height: 45,
                     decoration: BoxDecoration(
-                      color: Color(0xFF6B6B6B),
+                      color: const Color(0xFF6B6B6B),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         '10|5',
                         style: TextStyle(
@@ -304,15 +369,23 @@ class _TimePlayState extends State<TimePlay> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => GameBoard(
+                            timeSelected: 300 + 10), // Ejemplo de 60 segundos
+                      ),
+                    );
+                  },
                   child: Container(
                     width: 100,
                     height: 45,
                     decoration: BoxDecoration(
-                      color: Color(0xFF6B6B6B),
+                      color: const Color(0xFF6B6B6B),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         '10|10',
                         style: TextStyle(

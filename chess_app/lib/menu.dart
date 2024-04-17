@@ -1,3 +1,4 @@
+import 'package:chess_app/friendgame.dart';
 import 'package:chess_app/game_board.dart';
 import 'package:chess_app/time_chess.dart';
 import 'package:flutter/material.dart';
@@ -30,8 +31,7 @@ class _MenuPlayState extends State<MenuPlay> {
       body: Stack(
         children: [
           Positioned(
-            top:
-                0, // Ajusta la posición vertical de la imagen según sea necesario
+            top: 0,
             left: 0,
             right: 0,
             child: Center(
@@ -46,44 +46,54 @@ class _MenuPlayState extends State<MenuPlay> {
               ),
             ),
           ),
-          // Aquí puedes agregar otros widgets para el cuerpo de tu pantalla
           Positioned(
             top: 210,
             left: 25,
-            child: Container(
-              width: 340,
-              height: 60,
-              decoration: BoxDecoration(
-                color: Color(0xFF2E2E2E),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 80),
-                    child: Image.asset(
-                      'assets/amistad.png', // Ruta de la segunda imagen
-                      width: 30,
-                      height: 30,
-                      fit: BoxFit.contain,
-                    ),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        FriendGame(), // Ejemplo de 60 segundos
                   ),
-                  const Expanded(
-                    child: Center(
-                      child: Padding(
-                        padding: EdgeInsets.only(right: 50),
-                        child: Text(
-                          'Jugar con amigos',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontFamily: 'MontSerrat-SemiBold',
+                );
+              },
+              child: Container(
+                width: 340,
+                height: 60,
+                decoration: BoxDecoration(
+                  color: Color(0xFF2E2E2E),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 80),
+                      child: Image.asset(
+                        'assets/amistad.png', // Ruta de la segunda imagen
+                        width: 30,
+                        height: 30,
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                    const Expanded(
+                      child: Center(
+                        child: Padding(
+                          padding: EdgeInsets.only(right: 50),
+                          child: Text(
+                            'Jugar con amigos',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontFamily: 'MontSerrat-SemiBold',
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
@@ -230,8 +240,8 @@ class _MenuPlayState extends State<MenuPlay> {
             left: 25,
             child: GestureDetector(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => GameBoard()));
+                // Navigator.push(context,
+                //     MaterialPageRoute(builder: (context) => GameBoard()));
               },
               child: Container(
                 width: 340,
