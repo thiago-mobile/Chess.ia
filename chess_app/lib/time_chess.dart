@@ -13,9 +13,9 @@ class _TimePlayState extends State<TimePlay> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF363636),
+      backgroundColor: const Color(0xFF1b1b1b),
       appBar: AppBar(
-        backgroundColor: const Color(0xff1B1B1B),
+        backgroundColor: const Color(0xff000000),
         leading: IconButton(
           onPressed: () {
             Navigator.push(
@@ -44,7 +44,7 @@ class _TimePlayState extends State<TimePlay> {
             clipper: WaveClipper(),
             child: Container(
               height: 70.0,
-              color: const Color(0xff1B1B1B),
+              color: Color(0xFF000000),
             ),
           ),
           Padding(

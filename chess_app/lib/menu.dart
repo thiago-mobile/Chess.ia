@@ -14,17 +14,19 @@ class _MenuPlayState extends State<MenuPlay> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF363636),
+      backgroundColor: Color(0xFF1b1b1b),
       appBar: AppBar(
-        backgroundColor: Color(0xff1B1B1B),
+        backgroundColor: Color(0xff1b1b1b),
         leading: IconButton(
           onPressed: () {},
           icon: Icon(Icons.arrow_back_ios, color: Colors.white),
         ),
         title: Text(
           'Nueva Partida',
-          style:
-              TextStyle(fontFamily: 'MontSerrat-SemiBold', color: Colors.white),
+          style: TextStyle(
+              fontFamily: 'MontSerrat-Regular',
+              fontSize: 18,
+              color: Colors.white),
         ),
         centerTitle: true,
       ),
@@ -38,7 +40,7 @@ class _MenuPlayState extends State<MenuPlay> {
               child: Padding(
                 padding: const EdgeInsets.only(top: 30),
                 child: Image.asset(
-                  'assets/juegos.png',
+                  'assets/menu_logo.png',
                   width: 200,
                   height: 140,
                   fit: BoxFit.contain,
@@ -65,6 +67,14 @@ class _MenuPlayState extends State<MenuPlay> {
                 decoration: BoxDecoration(
                   color: Color(0xFF2E2E2E),
                   borderRadius: BorderRadius.circular(10),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color(0xFF000000).withOpacity(0.5),
+                      spreadRadius: 2,
+                      blurRadius: 1,
+                      offset: Offset(0, 3), // changes position of shadow
+                    ),
+                  ],
                 ),
                 child: Row(
                   children: [
@@ -106,6 +116,14 @@ class _MenuPlayState extends State<MenuPlay> {
               decoration: BoxDecoration(
                 color: Color(0xFF2E2E2E),
                 borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    color: Color(0xFF000000).withOpacity(0.5),
+                    spreadRadius: 2,
+                    blurRadius: 1,
+                    offset: Offset(0, 3), // changes position of shadow
+                  ),
+                ],
               ),
               child: Row(
                 children: [
@@ -146,6 +164,14 @@ class _MenuPlayState extends State<MenuPlay> {
               decoration: BoxDecoration(
                 color: Color(0xFF2E2E2E),
                 borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    color: Color(0xFF000000).withOpacity(0.5),
+                    spreadRadius: 2,
+                    blurRadius: 1,
+                    offset: Offset(0, 3), // changes position of shadow
+                  ),
+                ],
               ),
               child: Row(
                 children: [
@@ -247,13 +273,13 @@ class _MenuPlayState extends State<MenuPlay> {
                 width: 340,
                 height: 60,
                 decoration: BoxDecoration(
-                  color: Color(0xFF60BE08),
+                  color: Color(0xFF45E800),
                   borderRadius: BorderRadius.circular(10),
                   boxShadow: [
                     BoxShadow(
-                      color: Color(0xFF000000).withOpacity(0.5),
-                      spreadRadius: 3,
-                      blurRadius: 7,
+                      color: Color(0xFF5EFF01).withOpacity(0.5),
+                      spreadRadius: 2,
+                      blurRadius: 1,
                       offset: Offset(0, 3), // changes position of shadow
                     ),
                   ],

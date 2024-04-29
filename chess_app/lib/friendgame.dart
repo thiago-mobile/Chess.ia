@@ -13,9 +13,9 @@ class _TimePlayState extends State<FriendGame> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF363636),
+      backgroundColor: const Color(0xFF1b1b1b),
       appBar: AppBar(
-        backgroundColor: const Color(0xff1B1B1B),
+        backgroundColor: Color(0xFF000000),
         leading: IconButton(
           onPressed: () {
             Navigator.push(
@@ -43,8 +43,8 @@ class _TimePlayState extends State<FriendGame> {
           ClipPath(
             clipper: WaveClipper(),
             child: Container(
-              height: 70.0,
-              color: const Color(0xff1B1B1B),
+              height: 80.0,
+              color: const Color(0xFF000000),
             ),
           ),
           Padding(
@@ -78,8 +78,36 @@ class _TimePlayState extends State<FriendGame> {
               width: 320,
               height: 80,
               decoration: BoxDecoration(
-                  color: Color(0xFF2B2B2B),
-                  borderRadius: BorderRadius.circular(15)),
+                color: Color(0xFF2E2E2E),
+                borderRadius: BorderRadius.circular(15),
+                boxShadow: [
+                  BoxShadow(
+                    color: Color(0xFF000000).withOpacity(0.5),
+                    spreadRadius: 2,
+                    blurRadius: 1,
+                    offset: Offset(0, 3), // changes position of shadow
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 200, left: 40),
+            child: Container(
+              width: 320,
+              height: 80,
+              decoration: BoxDecoration(
+                color: Color(0xFF2E2E2E),
+                borderRadius: BorderRadius.circular(15),
+                boxShadow: [
+                  BoxShadow(
+                    color: Color(0xFF000000).withOpacity(0.5),
+                    spreadRadius: 2,
+                    blurRadius: 1,
+                    offset: Offset(0, 3), // changes position of shadow
+                  ),
+                ],
+              ),
             ),
           ),
         ],
