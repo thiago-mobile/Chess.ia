@@ -1,15 +1,15 @@
 ## Chess Ia
 
-# Objetivo
-El principal objetivo de este proyecto es practicar con Flutter, aprender sobre la implementación de una lógica de ajedrez y mejorar en la creación de aplicaciones móviles. No es un juego avanzado ni tiene todas las características de una aplicación profesional, pero es un buen ejemplo para quienes estén interesados en el desarrollo con Flutter.
+# Aim
+The main objective of this project is to practice with Flutter, learn about the implementation of chess logic and improve in creating mobile applications. It is not an advanced game nor does it have all the features of a professional application, but it is a good example for those interested in developing with Flutter.
 
-# Tecnologías
-Flutter: Framework para crear aplicaciones móviles.
-Dart: Lenguaje de programación utilizado por Flutter.
-Lógica básica de ajedrez: Implementación sencilla de las reglas del juego.
+# Technologies
+Flutter: Framework for creating mobile applications.
+Dart: Programming language used by Flutter.
+Basic chess logic: Simple implementation of the rules of the game.
 
-# Contribuciones
-Este proyecto es completamente personal, pero si deseas contribuir con sugerencias o mejoras, ¡serán bienvenidas!
+# Contributions
+This project is completely personal, but if you want to contribute with suggestions or improvements, they are welcome!
 
 https://github.com/user-attachments/assets/4a94f02a-bb2b-49df-8618-2b7f729eee68
 
